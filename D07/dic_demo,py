@@ -1,0 +1,33 @@
+def main():
+    scores = {
+        'Karl': 99,
+        'Juipter': 80,
+        'Venus':70,
+        'Star':60,
+        'Lucas': 44
+    }
+
+    print(scores['Venus'])
+    print(scores['Lucas'])
+
+    for elem in scores:
+        print(f'{elem}\t--->\t{scores[elem]}')
+
+    scores['Juipter'] = 88
+    scores['Lisa'] = 77
+    scores.update(Help=77, Hope=22)
+    print(scores)
+    if 'Lucas' in scores:
+        print(scores['Lucas'])
+    print(scores.get('Lucas'))
+    print(scores.get('Lucas', 60))
+
+    print(scores.popitem())
+    print(scores.popitem())
+    print(scores.pop('Karl', 100))
+
+    scores.clear()
+    print(scores)
+
+if __name__ == "__main__":
+    main()
